@@ -1,0 +1,112 @@
+@startuml Class_Diagram
+package "Application Layer" {
+    class "Application" as AppClass {
+        + function_name(param_name: param_type) : return_type
+    }
+}
+package "Driver Layer" {
+    class "Driver" as DriverClass {
+        + function_name(param_name: param_type) : return_type
+    }
+    DriverClass -up-> AppClass
+}
+package "Hardware Layer" {
+    class "Hardware Registers" as HWClass {
+        + A Register
+        + B Register
+        + C Register
+    }
+    HWClass -up-> DriverClass
+}
+@enduml
+
+@startuml Component_Diagram
+left to right direction
+[Application]
+() DriverInterface
+component Driver_Subsystem {
+    port DriverPort
+    () HardwareConfig
+    component Driver
+    component CMSIS
+}
+
+Application -d-( DriverInterface
+DriverInterface -d- DriverPort
+DriverPort -d- Driver
+Driver -d-( HardwareConfig
+HardwareConfig -d- CMSIS
+@enduml
+
+@startuml Sequence_Diagram_1
+App -> Driver : Driver_init()
+note right
+    Initialize driver.
+end note
+@enduml
+
+@startuml Sequence_Diagram_2
+App -> Driver : Driver_action()
+alt condional
+    Driver -> CMSIS : Set/Clear Register
+end
+Driver -> App : Driver_Status_t Status
+@enduml
+
+@startuml Sequence_Diagram_3
+App -> Driver : Driver_action()
+alt condional
+    loop n times
+       Driver -> CMSIS : Set/Clear n Register
+    end
+end
+Driver -> App : Driver_Status_t Status
+@enduml
+
+@startuml Activity_Diagram_1
+start
+:Initialize Driver Component;
+stop
+@enduml
+
+@startuml Activity_Diagram_2
+start
+:Initialize Driver Component;
+stop
+start
+if (condition?) then (yes)
+:Perform Action;
+#Green:Status Success;
+else (no)
+#Red:Status Failed;
+endif
+stop
+@enduml
+
+@startuml Activity_Diagram_3
+start
+#Red:Status Failed;
+while (condtion? and/or cycle < n?) is (true)
+:Perform n Action;
+#Green:Status Success;
+endwhile (false)
+stop
+@enduml
+
+@startuml State_Diagram
+left to right direction
+[*] --> Init : Reset
+state Application {
+    [*] --> Sleep
+    Sleep --> Running : EvConfig
+    Running --> Sleep : EvConfig
+}
+state Initializating {
+    [*] --> Configuration
+    Configuration --> Application : AppConfig
+}
+state Init {
+    [*] --> Idle 
+    Idle --> Initializating : InitConfig
+}
+@enduml
