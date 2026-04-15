@@ -3,7 +3,7 @@
 
 # Software Requirements Specification (SRS)  
 **Module:** General Purpose Input/Output (GPIO) Driver  
-**Version:** 1.0  
+**Version:** 1.1  
 **Author:** Carlos Villarreal 
 
 ---
@@ -37,6 +37,7 @@ The GPIO driver is a low-level software component that interfaces directly with 
 - Initialize GPIO subsystem and ports  
 - Configure pin modes (input, output, analog, alternate function)  
 - Set, clear, toggle, and read pin states  
+- Configure alternate function pin operation
 
 ### 2.3. User Characteristics  
 Intended users are embedded software developers with knowledge of C programming and microcontroller hardware.
@@ -88,6 +89,11 @@ Intended users are embedded software developers with knowledge of C programming 
 - **Description:** Reads the current state of a pin.  
 - **Functional Requirements:**  
   - FR-7: The system shall return the digital state of the specified pin.  
+
+### 3.8 `gpio_setAlternateFunction`  
+- **Description:** Configures the alternate function mode of a specific pin.  
+- **Functional Requirements:**  
+  - FR-8: The system shall allow configuration of pin alternate function operation.  
 
 ---
 

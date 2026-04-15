@@ -3,7 +3,7 @@
 
 # Lab Assignment: GPIO Driver Development and Application
 
-**Course:** Embedded Systems Programming  
+**Course:** Microcontrollers and Embedded Systems  
 **Lab Title:** GPIO Driver Implementation and LED/Pushbutton Application  
 **Author:** Carlos Villarreal  
 **Date:** April 7, 2026  
