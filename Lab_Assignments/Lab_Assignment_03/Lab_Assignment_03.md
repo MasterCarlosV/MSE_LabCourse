@@ -13,7 +13,7 @@
 ## 1. Objectives
 - Design and implement an ADC driver based on the provided Software Requirements Specification (SRS).  
 - Develop an **Analog Sensor module** that reads sensor values using the ADC driver.  
-- Use the **PWM module** developed on ([Lab Assignment 02](../Lab_Assignment_02.md)) to generate a PWM output signal on a GPIO pin.  
+- Use the **PWM module** developed on ([Lab Assignment 02](../Lab_Assignment_02/Lab_Assignment_02.md)) to generate a PWM output signal on a GPIO pin.  
 - Integrate both modules so that the analog sensor signal controls the PWM duty cycle.  
 - Demonstrate modular design and hardware abstraction principles.  
 
