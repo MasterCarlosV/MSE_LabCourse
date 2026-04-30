@@ -26,7 +26,7 @@ PWM signals are widely used in embedded systems for motor control, LED dimming, 
 ---
 
 ## 3. Pre-Lab Preparation
-- Review the **SRS for the GPIO driver** ([SRS-GPIO_Driver](../../SRS/GPIO/SRS-GPIO_Driver.md))
+- Review the **SRS for the GPIO driver** ([SRS-GPIO_Driver](../../SRS/GPIO/SRS-GPIO_Driver.md)).
 - Review the **SRS for the TIM driver** ([SRS-TIM_Driver](../../SRS/TIM/SRS-TIM_Driver.md)).  
 - Study STM32 GPIO register definitions (`MODER`, `AFRx`).  
 - Study STM32 TIM register definitions (`PSC`, `ARR`, `CNT`, `CCRx`, `CCMRx`, `CR1`, `SR`, `CCER`, clock enable registers).  

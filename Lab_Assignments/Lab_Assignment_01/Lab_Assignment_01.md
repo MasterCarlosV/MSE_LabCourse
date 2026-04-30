@@ -33,7 +33,7 @@ General Purpose Input/Output (GPIO) pins are fundamental to microcontroller-base
 ## 4. Lab Tasks
 ### Task 1: GPIO Driver Implementation
 - Implement the GPIO driver functions as defined in the SRS.  
-- Ensure compliance with functional requirements (FR-1 through FR-10).  
+- Ensure compliance with functional requirements (FR-1 through FR-8).  
 - Provide error handling for invalid ports/pins.  
 
 ### Task 2: LED Module

@@ -69,7 +69,6 @@ Intended users are embedded software developers with knowledge of C programming 
 **Functional Requirements:**  
 - FR-1: The system shall configure all TIM peripherals to a default state.  
 
-
 ### 3.2 `tim_initTimer`  
 **Description:** Initializes a specific TIM peripheral.  
 **Functional Requirements:**  
@@ -100,7 +99,7 @@ Intended users are embedded software developers with knowledge of C programming 
 **Functional Requirements:**  
 - FR-7: The system shall block execution until the timer reaches its overflow/update event.  
 
-### 3.8`tim_setTimerCompareChannelValue`  
+### 3.8 `tim_setTimerCompareChannelValue`  
 **Description:** Sets the threshold value for a capture/compare channel.  
 **Functional Requirements:**  
 - FR-8: The system shall trigger a compare event when the counter reaches the threshold.  
