@@ -28,7 +28,8 @@ Pulse Width Modulation (PWM) signals are widely used in embedded systems for mot
 
 ## 3. Pre-Lab Preparation
 - Review the **SRS for the ADC driver** ([SRS-ADC_Driver](../../SRS/ADC/SRS-ADC_Driver.md)).  
-- Study STM32 ADC register definitions (`CR1`, `CR2`, `SQRx`, `SMPRx`, `SR`, `DR`).   
+- Study STM32 ADC register definitions (`CR1`, `CR2`, `SQRx`, `SMPRx`, `SR`, `DR`) in the Reference Manual ([RM0383-STM32F411XCE](../../Documents/rm0383-stm32f411xce.pdf)).     
+- Review GPIO configuration for alternate function mode to output PWM signals and capture the analog signals in the microcontroller datasheet ([STM32F411RE](../../Documents/stm32f411re.pdf)).  
 - Locate the pins connected to the analog sensor input and PWM output in the user manual of your development board ([UM1724-STM32-NULCEO-64](../../Documents/um1724-stm32-nucleo-64.pdf)).  
 - Use Visual Studio Code as your text editor and the terminal (Git Bash) to build and flash the code to the STM32 microcontroller.  
 

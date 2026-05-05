@@ -28,9 +28,9 @@ PWM signals are widely used in embedded systems for motor control, LED dimming, 
 ## 3. Pre-Lab Preparation
 - Review the **SRS for the GPIO driver** ([SRS-GPIO_Driver](../../SRS/GPIO/SRS-GPIO_Driver.md)).
 - Review the **SRS for the TIM driver** ([SRS-TIM_Driver](../../SRS/TIM/SRS-TIM_Driver.md)).  
-- Study STM32 GPIO register definitions (`MODER`, `AFRx`).  
-- Study STM32 TIM register definitions (`PSC`, `ARR`, `CNT`, `CCRx`, `CCMRx`, `CR1`, `SR`, `CCER`, clock enable registers).  
-- Review GPIO configuration for alternate function mode to output PWM signals.  
+- Study STM32 GPIO register definitions (`MODER`, `AFRx`) in the Reference Manual ([RM0383-STM32F411XCE](../../Documents/rm0383-stm32f411xce.pdf)).  
+- Study STM32 TIM register definitions (`PSC`, `ARR`, `CNT`, `CCRx`, `CCMRx`, `CR1`, `SR`, `CCER`, clock enable registers) in the Reference Manual ([RM0383-STM32F411XCE](../../Documents/rm0383-stm32f411xce.pdf)).  
+- Review GPIO configuration for alternate function mode to output PWM signals in the microcontroller datasheet ([STM32F411RE](../../Documents/stm32f411re.pdf)).  
 - Locate the pins connected to the user LED or external header for PWM output in the user manual of your development board ([UM1724-STM32-NULCEO-64](../../Documents/um1724-stm32-nucleo-64.pdf)).  
 - Use Visual Studio Code as your text editor and the terminal (Git Bash) to build and flash the code to the STM32 microcontroller.  
 
